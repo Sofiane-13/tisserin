@@ -205,13 +205,13 @@ const NextImage = (_ref) => {
     media
   } = _ref,
       props = _objectWithoutProperties(_ref, ["media"]);
-
+  if(!media?.data?.attributes) return null
   const {
     url,
     alternativeText,
     width,
     height
-  } = media?.data?.attributes;
+  } = media.data.attributes;
 
   const loader = ({
     src,
