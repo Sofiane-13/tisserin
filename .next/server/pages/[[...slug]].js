@@ -211,7 +211,7 @@ const NextImage = (_ref) => {
     alternativeText,
     width,
     height
-  } = media.data.attributes;
+  } = media?.data?.attributes;
 
   const loader = ({
     src,
