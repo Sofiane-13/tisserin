@@ -14,7 +14,7 @@ const MyApp = ({ Component, pageProps }) => {
     return <ErrorPage statusCode={404} />
   }
 
-  const { metadata, favicon, metaTitleSuffix } = global?.attributes
+  const { metadata, favicon, metaTitleSuffix } = global.attributes
 
   return (
     <>
@@ -22,7 +22,7 @@ const MyApp = ({ Component, pageProps }) => {
       <Head>
         <link
           rel="shortcut icon"
-          href={getStrapiMedia(favicon.data?.attributes.url)}
+          href={getStrapiMedia(favicon.data.attributes.url)}
         />
       </Head>
       {/* Global site metadata */}
@@ -32,7 +32,7 @@ const MyApp = ({ Component, pageProps }) => {
         description={metadata.metaDescription}
         openGraph={{
           images: Object.values(
-            metadata.shareImage.data?.attributes.formats
+            metadata.shareImage.data.attributes.formats
           ).map((image) => {
             return {
               url: getStrapiMedia(image.url),

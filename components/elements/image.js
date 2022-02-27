@@ -9,7 +9,6 @@ const NextImage = ({ media, ...props }) => {
   console.log('props', props)
   /*eslint-enable */
 
-  if (!media?.data?.attributes) return null
   const { url, alternativeText, width, height } = media.data.attributes
 
   const loader = ({ src, width }) => {

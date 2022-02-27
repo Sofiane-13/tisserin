@@ -28,7 +28,7 @@ const DynamicPage = ({ sections, metadata, preview, global, pageContext }) => {
     delete metadata.shareImage
   }
   const metadataWithDefaults = {
-    ...global?.attributes.metadata,
+    ...global.attributes.metadata,
     ...metadata,
   }
 
@@ -57,7 +57,7 @@ export async function getStaticPaths(context) {
   )
 
   const paths = pages.map((page) => {
-    const { slug, locale } = page?.attributes
+    const { slug, locale } = page.attributes
     // Decompose the slug that was saved in Strapi
     const slugArray = !slug ? false : slug.split("/")
 
@@ -75,12 +75,14 @@ export async function getStaticProps(context) {
   const { params, locale, locales, defaultLocale, preview = null } = context
 
   const globalLocale = await getGlobalData(locale)
+
   // Fetch pages. Include drafts if preview mode is on
   const pageData = await getPageData({
     slug: (!params.slug ? [""] : params.slug).join("/"),
     locale,
     preview,
   })
+  console.log(JSON.stringify(pageData, null, 2))
 
   if (pageData == null) {
     // Giving the page no props will trigger a 404 page
