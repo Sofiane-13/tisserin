@@ -28,7 +28,7 @@ const DynamicPage = ({ sections, metadata, preview, global, pageContext }) => {
     delete metadata.shareImage
   }
   const metadataWithDefaults = {
-    ...global.attributes.metadata,
+    ...global?.attributes.metadata,
     ...metadata,
   }
 
@@ -57,7 +57,7 @@ export async function getStaticPaths(context) {
   )
 
   const paths = pages.map((page) => {
-    const { slug, locale } = page.attributes
+    const { slug, locale } = page?.attributes
     // Decompose the slug that was saved in Strapi
     const slugArray = !slug ? false : slug.split("/")
 
@@ -88,7 +88,7 @@ export async function getStaticProps(context) {
   }
 
   // We have the required page data, pass it to the page component
-  const { contentSections, metadata, localizations, slug } = pageData.attributes
+  const { contentSections, metadata, localizations, slug } = pageData?.attributes
 
   const pageContext = {
     locale,
