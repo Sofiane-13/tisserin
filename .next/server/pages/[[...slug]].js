@@ -205,6 +205,8 @@ const NextImage = (_ref) => {
     media
   } = _ref,
       props = _objectWithoutProperties(_ref, ["media"]);
+  console.log('media', media)
+  console.log('props', props)
   if(!media?.data?.attributes) return null
   const {
     url,
