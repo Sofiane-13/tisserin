@@ -14,7 +14,11 @@ const MyApp = ({ Component, pageProps }) => {
     return <ErrorPage statusCode={404} />
   }
 
-  const { metadata, favicon, metaTitleSuffix } = global.attributes
+  let attributes = null
+  if (global.attributes) attributes = global.attributes
+  else attributes = global.data.attributes
+
+  const { metadata, favicon, metaTitleSuffix } = attributes
 
   return (
     <>

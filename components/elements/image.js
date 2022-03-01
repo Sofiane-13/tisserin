@@ -4,11 +4,6 @@ import PropTypes from "prop-types"
 import { mediaPropTypes } from "utils/types"
 
 const NextImage = ({ media, ...props }) => {
-  /*eslint-disable */
-  console.log('media', media)
-  console.log('props', props)
-  /*eslint-enable */
-
   const { url, alternativeText, width, height } = media.data.attributes
 
   const loader = ({ src, width }) => {
