@@ -23,12 +23,6 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       {/* Favicon */}
-      <Head>
-        <link
-          rel="shortcut icon"
-          href={getStrapiMedia(favicon.data.attributes.url)}
-        />
-      </Head>
       {/* Global site metadata */}
       <DefaultSeo
         titleTemplate={`%s | ${metaTitleSuffix}`}
