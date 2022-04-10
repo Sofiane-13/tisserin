@@ -7,7 +7,7 @@ const Footer = ({ footer }) => {
   return (
     <footer className="pt-12 bg-gray-100">
       <div className="container flex flex-col lg:flex-row lg:justify-between">
-        <div>
+        <div id="footer-logo">
           {footer.logo && (
             <NextImage width="120" height="33" media={footer.logo} />
           )}

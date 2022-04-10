@@ -43,11 +43,11 @@ const Navbar = ({ navbar, pageContext }) => {
           </div>
           <div className="flex">
             {/* Locale Switch Mobile */}
-            {pageContext.localizedPaths && (
+            {/* {pageContext.localizedPaths && (
               <div className="md:hidden">
                 <LocaleSwitch pageContext={pageContext} />
               </div>
-            )}
+            )} */}
             {/* Hamburger menu on mobile */}
             <button
               onClick={() => setMobileMenuIsShown(true)}
@@ -66,11 +66,11 @@ const Navbar = ({ navbar, pageContext }) => {
               </div>
             )}
             {/* Locale Switch Desktop */}
-            {pageContext.localizedPaths && (
+            {/* {pageContext.localizedPaths && (
               <div className="hidden md:block">
                 <LocaleSwitch pageContext={pageContext} />
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </nav>
