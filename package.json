@@ -11,6 +11,7 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
+    "@nextui-org/react": "^1.0.0-beta.7",
     "@tailwindcss/typography": "^0.4.1",
     "classnames": "^2.2.6",
     "cookie": "^0.4.1",

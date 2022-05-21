@@ -5,6 +5,8 @@ import { useRouter } from "next/router"
 import { DefaultSeo } from "next-seo"
 import { getStrapiMedia } from "utils/media"
 import { getGlobalData } from "utils/api"
+import { NextUIProvider } from '@nextui-org/react';
+
 import "@/styles/index.css"
 
 const MyApp = ({ Component, pageProps }) => {
@@ -21,7 +23,7 @@ const MyApp = ({ Component, pageProps }) => {
   const { metadata, favicon, metaTitleSuffix } = attributes
 
   return (
-    <>
+    <NextUIProvider>
       {/* Favicon */}
       {/* Global site metadata */}
       <DefaultSeo
@@ -46,7 +48,7 @@ const MyApp = ({ Component, pageProps }) => {
       />
       {/* Display the content */}
       <Component {...pageProps} />
-    </>
+    </NextUIProvider>
   )
 }
 
