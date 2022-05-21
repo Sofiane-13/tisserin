@@ -1,10 +1,8 @@
 import Markdown from "react-markdown"
-import NextImage from "../elements/image"
 import { Card as CardUI } from '@nextui-org/react';
 import { User } from '@nextui-org/react';
 
 const Card = ({ data }) => {
-  console.log(data)
   return (
     <main className="container flex flex-col md:flex-row items-center justify-between py-12">
     <CardUI bordered hoverable>
