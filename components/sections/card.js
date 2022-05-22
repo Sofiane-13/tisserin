@@ -40,6 +40,7 @@ const Card = ({ data }) => {
           squared
           color="primary"
           zoomed
+          css={{ 'z-index': '1' }}
         />
         <div className="flex-1 sm:pr-8">
           <div className="text-base md:text-sm mt-4 sm:mt-3 rich-text-hero">
