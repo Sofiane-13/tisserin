@@ -8,7 +8,7 @@ const Card = ({ data }) => {
 
   return (
     <main className="container flex flex-col md:flex-row items-center justify-between py-12">
-      <CardUI bordered hoverable>
+      <CardUI bordered hoverable onClick={() => setVisible(true)}>
         <Modal
           scroll
           fullScreen
