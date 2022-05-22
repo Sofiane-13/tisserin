@@ -1,11 +1,36 @@
 import Markdown from "react-markdown"
 import { Card as CardUI } from "@nextui-org/react"
-import { User } from "@nextui-org/react"
+import { User, Modal, useModal, Text, Button } from "@nextui-org/react"
+import NextImage from "../elements/image"
 
 const Card = ({ data }) => {
+  const { setVisible, bindings } = useModal()
+
   return (
     <main className="container flex flex-col md:flex-row items-center justify-between py-12">
       <CardUI bordered hoverable>
+        <Modal
+          scroll
+          fullScreen
+          closeButton
+          aria-labelledby="modal-title"
+          aria-describedby="modal-description"
+          {...bindings}
+        >
+          <Modal.Header>
+            <Text id="modal-title" size={18}>
+              {data.title}
+            </Text>
+          </Modal.Header>
+          <Modal.Body>
+            <NextImage d="modal-description" media={data.picture} />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button flat auto color="error" onClick={() => setVisible(false)}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
         <User
           src={data.picture?.data?.attributes?.url}
           name={data.title}
