@@ -5,7 +5,7 @@ import NextImage from "../elements/image"
 
 const Hero = ({ data }) => {
   return (
-    <main className="container flex flex-col md:flex-row items-center justify-between py-12">
+    <div className="mx-auto py-12">
       {/* Left column for content */}
       <div className="flex-1 sm:pr-8">
         {/* Hero section label */}
@@ -29,11 +29,7 @@ const Hero = ({ data }) => {
           <Markdown>{data.smallTextWithLink}</Markdown>
         </div>
       </div>
-      {/* Right column for the image */}
-      <div className="flex-shrink-0 w-full md:w-6/12 mt-6 md:mt-0">
-        <NextImage media={data.picture} />
-      </div>
-    </main>
+    </div>
   )
 }
 
