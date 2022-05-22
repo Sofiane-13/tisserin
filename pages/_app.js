@@ -1,11 +1,9 @@
 import App from "next/app"
-import Head from "next/head"
 import ErrorPage from "next/error"
-import { useRouter } from "next/router"
 import { DefaultSeo } from "next-seo"
 import { getStrapiMedia } from "utils/media"
 import { getGlobalData } from "utils/api"
-import { NextUIProvider, createTheme } from '@nextui-org/react';
+import { NextUIProvider, createTheme } from "@nextui-org/react"
 
 import "@/styles/index.css"
 
@@ -27,32 +25,30 @@ const MyApp = ({ Component, pageProps }) => {
     theme: {
       colors: {
         // brand colors
-        primaryLight: '$green200',
-        primaryLightHover: '$green300',
-        primaryLightActive: '$green400',
-        primaryLightContrast: '$green600',
-        primary: '#4ADE7B',
-        primaryBorder: '$green500',
-        primaryBorderHover: '$green600',
-        primarySolidHover: '$green700',
-        primarySolidContrast: '$white',
-        primaryShadow: '$green500',
-  
-        gradient: 'linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)',
-        link: '#5E1DAD',
-  
+        primaryLight: "$green200",
+        primaryLightHover: "$green300",
+        primaryLightActive: "$green400",
+        primaryLightContrast: "$green600",
+        primary: "#4ADE7B",
+        primaryBorder: "$green500",
+        primaryBorderHover: "$green600",
+        primarySolidHover: "$green700",
+        primarySolidContrast: "$white",
+        primaryShadow: "$green500",
+        gradient: `linear-gradient
+        (112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)`,
+        link: "#5E1DAD",
         // you can also create your own color
-        veryDarkBlue: '#0D3B66',
-        lightYrayishYellow: '#FAF0CA',
-        softYellow: '#F4D35E',
-        softOrange: '#EE964B',
-        brightRed: '#F95738',
-  
+        veryDarkBlue: "#0D3B66",
+        lightYrayishYellow: "#FAF0CA",
+        softYellow: "#F4D35E",
+        softOrange: "#EE964B",
+        brightRed: "#F95738",
         // ...  more colors
       },
       space: {},
-      fonts: {}
-    }
+      fonts: {},
+    },
   })
   return (
     <NextUIProvider theme={theme}>
