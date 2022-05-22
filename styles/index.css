@@ -15,6 +15,10 @@ nav img {
   object-fit: cover;
 }
 
+#header-logo img {
+  object-fit: cover;
+}
+
 @media screen and (min-width: 640px) {
   html {
     font-size: 14px;
