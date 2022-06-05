@@ -17,6 +17,10 @@ html {
   @apply text-gray-900;
 }
 
+ul {
+  list-style: inside;
+}
+
 nav img {
   object-fit: cover;
 }
