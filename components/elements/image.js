@@ -3,9 +3,10 @@ import Image from "next/image"
 import PropTypes from "prop-types"
 import { mediaPropTypes } from "utils/types"
 
-const NextImage = ({ media, ...props }) => {
+const NextImage = ({ media, layout, className, ...props }) => {
   const { url, alternativeText, width, height } = media.data.attributes
-
+  const myLayout = layout || "responsive"
+  console.log(myLayout)
   const loader = ({ src, width }) => {
     return getStrapiMedia(src)
   }
@@ -25,6 +26,7 @@ const NextImage = ({ media, ...props }) => {
       width={width}
       height={height}
       objectFit="contain"
+      className={className}
       src={url}
       alt={alternativeText || ""}
     />

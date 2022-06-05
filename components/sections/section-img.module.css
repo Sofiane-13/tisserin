@@ -1,0 +1,18 @@
+.containerimg > div > div {
+  display: none !important;
+}
+
+.image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+  margin-bottom: 2rem !important;
+}
+
+@media (min-width: 640px) { 
+  .image {
+    margin-top: 4rem !important;
+    margin-bottom: 0;
+  }
+ }

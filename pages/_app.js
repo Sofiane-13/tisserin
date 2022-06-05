@@ -5,6 +5,7 @@ import { getStrapiMedia } from "utils/media"
 import { getGlobalData } from "utils/api"
 import { NextUIProvider, createTheme } from "@nextui-org/react"
 
+import "@/styles/variables.css"
 import "@/styles/index.css"
 
 const MyApp = ({ Component, pageProps }) => {

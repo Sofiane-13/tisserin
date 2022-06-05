@@ -131,6 +131,15 @@ export async function getPageData({ slug, locale, preview }) {
                       ...FileParts
                     }
                   }
+                  ... on ComponentSectionsSectionImg {
+                    id
+                    title
+                    subTitle
+                    description
+                    picture {
+                      ...FileParts
+                    }
+                  }
                   ... on ComponentSectionsCard{
                     id
                     title

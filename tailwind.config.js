@@ -1,5 +1,14 @@
 const { colors } = require(`tailwindcss/defaultTheme`)
 
+function withOpacityValue(variable) {
+  return ({ opacityValue }) => {
+    if (opacityValue === undefined) {
+      return `rgb(var(${variable}))`
+    }
+    return `rgb(var(${variable}) / ${opacityValue})`
+  }
+}
+
 module.exports = {
   mode: "jit", // see https://tailwindcss.com/docs/just-in-time-mode
   purge: ["./components/**/*.js", "./pages/**/*.js"],
@@ -8,6 +17,11 @@ module.exports = {
     extend: {
       colors: {
         primary: colors.indigo,
+        veryDarkBlue: 'var(--veryDarkBlue)',
+        lightYrayishYellow: 'var(--lightYrayishYellow)',
+        softYellow: 'var(--softYellow)',
+        softOrange: 'var(--softOrange)',
+        brightRed: 'var(--brightRed)',
       },
       container: {
         center: true,

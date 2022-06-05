@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.root,
+#root,
+#docs-root {
+  --veryDarkBlue: "#0D3B66";
+  --lightYrayishYellow: "#FAF0CA";
+  --softYellow: "#F4D35E";
+  --softOrange: "#EE964B";
+  --brightRed: "#F95738";
+}
+
 html {
   font-size: 13px;
   @apply text-gray-900;
@@ -16,6 +26,10 @@ nav img {
 }
 
 #header-logo img {
+  object-fit: cover;
+}
+
+#section-img img {
   object-fit: cover;
 }
 
