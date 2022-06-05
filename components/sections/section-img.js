@@ -3,7 +3,7 @@ import NextImage from "../elements/image"
 import styles from "./section-img.module.css"
 const SectionImg = ({ data }) => {
   return (
-    <div className="container flex flex-col md:flex-row items-center justify-between pb-4">
+    <div className="container flex flex-col md:flex-row items-center justify-between pb-2 pt-2">
       <Collapse
         animated
         shadow
@@ -17,14 +17,20 @@ const SectionImg = ({ data }) => {
       >
         <Text>
           <div className="flex flex-col sm:flex-row">
-            <div className={styles.containerimg} id="section-img">
-              <NextImage
-                className={styles.image}
-                layout="fill"
-                media={data.picture}
-              />
-            </div>
-            <div className="flex flex-col px-8 sm:w-4/6">
+            {data?.picture?.data && (
+              <div className={styles.containerimg} id="section-img">
+                <NextImage
+                  className={styles.image}
+                  layout="fill"
+                  media={data.picture}
+                />
+              </div>
+            )}
+            <div
+              className={`flex flex-col px-8 ${
+                data?.picture?.data ? "sm:w-4/6" : ""
+              }`}
+            >
               <span className="sm:ml-auto mb-4 text-3xl text-[#F95738]">
                 {data.subTitle}
               </span>
