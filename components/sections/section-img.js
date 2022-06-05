@@ -1,3 +1,4 @@
+import Markdown from "react-markdown"
 import { Collapse, Text } from "@nextui-org/react"
 import NextImage from "../elements/image"
 import styles from "./section-img.module.css"
@@ -34,7 +35,7 @@ const SectionImg = ({ data }) => {
               <span className="sm:ml-auto mb-4 text-3xl text-[#F95738]">
                 {data.subTitle}
               </span>
-              <span>{data.description}</span>
+              <Markdown>{data.description}</Markdown>
             </div>
           </div>
         </Text>
