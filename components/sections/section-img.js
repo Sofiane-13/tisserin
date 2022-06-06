@@ -32,7 +32,7 @@ const SectionImg = ({ data }) => {
                 data?.picture?.data ? "sm:w-4/6" : ""
               }`}
             >
-              <span className="sm:ml-auto mb-4 text-3xl text-[#F95738]">
+              <span className="ml-auto mb-4 text-3xl text-[#F95738]">
                 {data.subTitle}
               </span>
               <Markdown>{data.description}</Markdown>
